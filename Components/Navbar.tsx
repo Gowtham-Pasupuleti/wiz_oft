@@ -9,6 +9,7 @@ import ChevronDown from "../Icons/chevronDown";
 import RequestQuote from "./requestQuote";
 import UserIcon from "../Icons/userIcon";
 import ShipIcon from "../Icons/shipIcon"
+import DropDownFinal from "./DropDownFinal";
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -25,7 +26,10 @@ function Nav() {
                   <Button name="Workspace" iconRight={<ChevronDown/>}></Button>
                     <Button name="Quotes" iconLeft={<Quotes/>}></Button>
                     <Button name="Bookings" iconLeft={<BookingsIcon/>}></Button>
-                    <Button name="Manage" iconLeft={<SettingsIcon/>} iconRight={<ChevronDown/>}></Button>
+                    <div  className="h-15 w-38 flex justify-around">
+                    <DropDownFinal />
+                    </div>
+                    {/* <Button name="Manage" iconLeft={<SettingsIcon/>} iconRight={<ChevronDown/>}></Button> */}
                                   
                 </div>
               </div>
