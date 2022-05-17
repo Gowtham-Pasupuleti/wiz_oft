@@ -21,12 +21,12 @@ function Nav() {
               <div className="flex-shrink-0 py-3 md:py-2 md:pr-12">
                   <WizIcon/>
               </div>
-              <div className="hidden md:block ">
+              <div className="hidden md:block justify-around w-30 ">
                 < div className="flex items-center">
                   <Button name="Workspace" iconRight={<ChevronDown/>}></Button>
                     <Button name="Quotes" iconLeft={<Quotes/>}></Button>
                     <Button name="Bookings" iconLeft={<BookingsIcon/>}></Button>
-                    <div  className="h-15 w-38 flex justify-around">
+                    <div  className="h-15 w-38 flex ">
                     <DropDownFinal />
                     </div>
                     {/* <Button name="Manage" iconLeft={<SettingsIcon/>} iconRight={<ChevronDown/>}></Button> */}

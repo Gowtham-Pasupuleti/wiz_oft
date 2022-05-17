@@ -15,7 +15,7 @@ function DropDownFinal() {
   return (
     <>
       <div
-        className={` w-40 px-2 py-1 antialiased inline-block absolute`}
+        className={` w-40 px-2 py-1 antialiased inline-block `}
         ref={ref}
       >
         <Menu>
@@ -42,7 +42,7 @@ function DropDownFinal() {
           </div>
 
           <Menu.Items
-            className={`flex flex-col w-40 text-left
+            className={`absolute flex flex-col w-40 text-left
   rounded-sm border-white font-medium text-base font-serif
   antialiased hover:subpixel-antialiased `}
           >
