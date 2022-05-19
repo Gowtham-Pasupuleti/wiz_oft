@@ -1,8 +1,9 @@
 import DropDown from "./DropDown";
 import SubDropDownItems from "./SubDropDownItems";
 import { Menu } from "@headlessui/react";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import useOutsideClick from "./HandleClickOutSide";
+// import { UserContext } from "./Navbar";
 
 function UserDropdown() {
   const ref = useRef();

@@ -13,8 +13,12 @@ import DropDownFinal from "./DropDownFinal";
 import WorkSpaceDropDown from "./WorkSpaceDropDown";
 import UserDropdown from "./UserDropdown";
 
+// const getUserType = ["Admin", "User"][Math.floor(Math.random() * 2)];
+// export const UserContext = React.createContext(getUserType);
+// export const UserProvider = UserContext.Provider;
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-[#5C20CF]  font-sans font-extralight ">
       <div className=" mx-auto pl-2 ̰ sm:pl-4 md:pl-4 lg:pl-6 ">
