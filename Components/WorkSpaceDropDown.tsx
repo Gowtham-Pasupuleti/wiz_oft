@@ -17,10 +17,10 @@ function WorkSpaceDropDown() {
         <Menu>
           <div className="  bg-[#5C20CF]  rounded-sm w-full ">
             <Menu.Button
-              className={`outline-none focus:outline-none
+              className={`text-sm font-normal outline-none focus:outline-none
            h-12  rounded-sm 
-            px-2 py-1 w-full flex text-white justify-center font-semibold  items-center pl-1
-            `}
+            px-2 py-1 w-full flex text-white justify-center   items-center pl-1
+           hover:bg-[#5317C3] `}
               onClick={() => setClicked(!clicked)}
             >
               Workspace

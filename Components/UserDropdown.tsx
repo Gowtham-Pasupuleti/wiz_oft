@@ -3,6 +3,7 @@ import SubDropDownItems from "./SubDropDownItems";
 import { Menu } from "@headlessui/react";
 import { useState, useRef, useContext } from "react";
 import useOutsideClick from "./HandleClickOutSide";
+import UserIcon from "../Icons/userIcon";
 // import { UserContext } from "./Navbar";
 
 function UserDropdown() {
@@ -21,10 +22,11 @@ function UserDropdown() {
             <Menu.Button
               className={`outline-none focus:outline-none
            h-12  rounded-sm 
-            px-2 py-1 w-full flex text-white justify-center font-semibold  items-center pl-1
+            px-2 py-1 w-full flex text-white justify-center font-semibold text-sm  items-center pl-1 hover:bg-[#5317C3]
             `}
               onClick={() => setClicked(!clicked)}
             >
+              <UserIcon />
               Admin
               <span className="ml-1">
                 <svg

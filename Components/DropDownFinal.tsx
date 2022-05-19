@@ -3,6 +3,7 @@ import DropDown from "./DropDown";
 import SubDropDownItems from "./SubDropDownItems";
 import { useState, useRef } from "react";
 import useOutsideClick from "./HandleClickOutSide";
+import SettingsIcon from "../Icons/settingsIcon";
 
 function DropDownFinal() {
   const ref = useRef();
@@ -21,12 +22,13 @@ function DropDownFinal() {
         <Menu>
           <div className="  bg-white  rounded-sm w-full ">
             <Menu.Button
-              className={`outline-none focus:outline-none
+              className={` text-sm font-normal outline-none focus:outline-none
            h-12  rounded-sm 
-            px-2 py-1 w-full flex bg-[#5c20cf] text-white justify-center font-sm  items-center pl-1
+            px-2 py-1 w-full flex bg-[#5c20cf] text-white justify-center font-sm  items-center pl-1 hover:bg-[#5317C3]
             `}
               onClick={() => setClicked(!clicked)}
             >
+              <SettingsIcon />
               Manage
               <span className="ml-1">
                 <svg
