@@ -33,9 +33,9 @@ function Nav() {
                 <WorkSpaceDropDown />
                 <Button name="Quotes" iconLeft={<Quotes />}></Button>
                 <Button name="Bookings" iconLeft={<BookingsIcon />}></Button>
-                <div className="h-15 w-38 flex ">
-                  <DropDownFinal />
-                </div>
+                <div><DropDownFinal /></div>
+                  
+                
                 {/* <Button name="Manage" iconLeft={<SettingsIcon/>} iconRight={<ChevronDown/>}></Button> */}
               </div>
             </div>
