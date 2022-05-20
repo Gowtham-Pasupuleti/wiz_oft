@@ -4,7 +4,12 @@ import { Menu } from "@headlessui/react";
 import { useState, useRef, useContext } from "react";
 import useOutsideClick from "./HandleClickOutSide";
 import UserIcon from "../Icons/userIcon";
-// import { UserContext } from "./Navbar";
+import SupportReqIcon from "../Icons/SupportReqIcon";
+import ProductUpdates from "../Icons/ProductUpdates";
+import ConfigureUser from "../Icons/ConfigureUser";
+import ReportsIcon from "../Icons/ReportsIcon";
+import LogoutIcon from "../Icons/LogoutIcon";
+import ErrorIcon from "../Icons/ErrorIcon";
 
 function UserDropdown() {
   const ref = useRef();
@@ -16,14 +21,14 @@ function UserDropdown() {
 
   return (
     <>
-      <div className={`  px-2 py-1  antialiased inline-block `} ref={ref}>
+      <div className={`  px-2 py-1  w-40  antialiased inline-block `} ref={ref}>
         <Menu>
           <div className="  bg-[#5C20CF]  rounded-sm w-full ">
             <Menu.Button
-              className={`outline-none focus:outline-none
+              className={`text-sm font-normal outline-none focus:outline-none
            h-12  rounded-sm 
-            px-2 py-1 w-full flex text-white justify-center font-semibold text-sm  items-center pl-1 hover:bg-[#5317C3]
-            `}
+            px-2 py-1 w-full flex text-white justify-center   items-center 
+           hover:bg-[#5317C3] `}
               onClick={() => setClicked(!clicked)}
             >
               <UserIcon />
@@ -44,14 +49,16 @@ function UserDropdown() {
           <Menu.Items
             className={`flex flex-col w-40 text-left
   rounded-sm border-white  text-base font-serif
-  antialiased hover:subpixel-antialiased absolute `}
+  antialiased hover:subpixel-antialiased absolute mt-3
+  ring-1 ring-black ring-opacity-5 shadow-lg
+  `}
           >
-            <DropDown name="Report Problem" />
-            <DropDown name="Support Request" />
-            <DropDown name="Product Updates" />
-            <DropDown name="Account" />
-            <DropDown name="Reports" />
-            <DropDown name="Logout" />
+            <DropDown name="Account" icon={<ConfigureUser />} />
+            <DropDown name="Reports" icon={<ReportsIcon />} />
+            <DropDown name="Report Problem" icon={<ErrorIcon />} />
+            <DropDown name="Support Request" icon={<SupportReqIcon />} />
+            <DropDown name="Product Updates" icon={<ProductUpdates />} />
+            <DropDown name="Logout" icon={<LogoutIcon />} />
           </Menu.Items>
         </Menu>
       </div>

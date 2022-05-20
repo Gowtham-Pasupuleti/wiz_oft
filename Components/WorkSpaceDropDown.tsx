@@ -44,8 +44,8 @@ function WorkSpaceDropDown() {
   rounded-sm border-white  text-sm font-serif
   antialiased hover:subpixel-antialiased absolute mt-2  ring-1 ring-black ring-opacity-5 shadow-lg w-40 `}
           >
-            <DropDown name="My workspace" leftIcon={<ConfigureUser />} />
-            <DropDown name="Workspace-360°" leftIcon={<ConfigureGroup />} />
+            <DropDown name="My workspace" icon={<ConfigureUser />} />
+            <DropDown name="Workspace-360°" icon={<ConfigureGroup />} />
           </Menu.Items>
         </Menu>
       </div>
