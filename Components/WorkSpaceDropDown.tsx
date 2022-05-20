@@ -2,6 +2,8 @@ import DropDown from "./DropDown";
 import { Menu } from "@headlessui/react";
 import { useState, useRef } from "react";
 import useOutsideClick from "./HandleClickOutSide";
+import ConfigureGroup from "../Icons/ConfigureGroup";
+import ConfigureUser from "../Icons/ConfigureUser";
 
 function WorkSpaceDropDown() {
   const ref = useRef();
@@ -13,13 +15,13 @@ function WorkSpaceDropDown() {
 
   return (
     <>
-      <div className={`  px-2 py-1 antialiased inline-block `} ref={ref}>
+      <div className={` px-2 py-1 antialiased w-40 inline-block`} ref={ref}>
         <Menu>
           <div className="  bg-[#5C20CF]  rounded-sm w-full ">
             <Menu.Button
               className={`text-sm font-normal outline-none focus:outline-none
            h-12  rounded-sm 
-            px-2 py-1 w-full flex text-white justify-center   items-center pl-1
+            px-2 py-1 w-full flex text-white justify-center   items-center 
            hover:bg-[#5317C3] `}
               onClick={() => setClicked(!clicked)}
             >
@@ -38,12 +40,12 @@ function WorkSpaceDropDown() {
           </div>
 
           <Menu.Items
-            className={`flex flex-col w-40 text-left
-  rounded-sm border-white  text-base font-serif
-  antialiased hover:subpixel-antialiased absolute `}
+            className={`flex flex-col  text-left
+  rounded-sm border-white  text-sm font-serif
+  antialiased hover:subpixel-antialiased absolute mt-2  ring-1 ring-black ring-opacity-5 shadow-lg w-40 `}
           >
-            <DropDown name="My workspace" />
-            <DropDown name="Workspace-360°" />
+            <DropDown name="My workspace" leftIcon={<ConfigureUser />} />
+            <DropDown name="Workspace-360°" leftIcon={<ConfigureGroup />} />
           </Menu.Items>
         </Menu>
       </div>

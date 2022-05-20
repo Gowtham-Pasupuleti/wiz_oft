@@ -16,7 +16,7 @@ function UserDropdown() {
 
   return (
     <>
-      <div className={`  px-2 py-1 antialiased inline-block `} ref={ref}>
+      <div className={`  px-2 py-1  antialiased inline-block `} ref={ref}>
         <Menu>
           <div className="  bg-[#5C20CF]  rounded-sm w-full ">
             <Menu.Button

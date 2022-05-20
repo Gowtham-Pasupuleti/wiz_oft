@@ -3,16 +3,14 @@ import { Menu } from "@headlessui/react";
 function DropDown(props) {
   if (!props.children) {
     return (
-      <div className="mt-4">
+      <div className="mt-1">
         <Menu.Item>
           {({ active }) => (
-            <a
-              className={` ${
-                active && ""
-              }`}
-              href="#"
-            >
-              <span className="flex items-center  text-sm font-normal font-sans"><span className="pr-3 pl-2">{props.icon}</span>{props.name}</span>
+            <a className={` ${active && ""}`} href="#">
+              <span className="flex items-center  text-sm font-normal hover:bg-[#f5f5f5cd] h-10 font-sans">
+                <span className="pr-3 pl-2">{props.icon}</span>
+                {props.name}
+              </span>
             </a>
           )}
         </Menu.Item>
@@ -22,13 +20,18 @@ function DropDown(props) {
 
   return (
     <>
-      <a className="rounded-sm relative block min-w-full text-sm font-sans font-normal px-1  mt-1 bg-white   text-black  list-none submenu">
-        <button className="w-full text-left flex items-center outline-none focus:outline-none">
-          <span className="pr-1 flex-1 "><div className="flex items-center">{props.icon}{props.name}</div></span>
-          <span className="mr-auto">
+      <a className="rounded-sm relative block min-w-full text-sm font-sans font-normal mt-1 hover:bg-[#f5f5f5cd] h-10  bg-white   text-black  list-none submenu">
+        <button className="w-full text-left flex justify-between items-center pl-2 pr-1 pt-2 outline-none focus:outline-none">
+          <span className="grow-[0.4] flex">
+            <div className="flex items-center justify-center">
+              <div className="rotate-0">{props.icon}</div>
+              <div className="w-full ml-2.5">{props.name}</div>
+            </div>
+          </span>
+          <span className="">
             <svg
               className={`fill-current h-4 w-4
-            transition duration-150 ease-in-out `}
+            transition duration-150 ease-in-out rotate-[-90deg] hover:rotate-[-90] `}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >

@@ -23,24 +23,27 @@ function Nav() {
     <nav className="bg-[#5C20CF]  font-sans font-extralight ">
       <div className=" mx-auto pl-2 ̰ sm:pl-4 md:pl-4 lg:pl-6 ">
         <div className="flex  items-center justify-between">
-          <div className="flex  h-full items-center">
-            <div className="flex-shrink-0 py-3 md:py-2 md:pr-12">
+          <div className="flex  h-full items-center flex-[0.5]">
+            <div className="flex-shrink-0 py-3 md:py-2 md:pr-12 ml-4">
               <WizIcon />
             </div>
-            <div className="hidden md:block justify-around w-30 ">
-              <div className="flex items-center">
+            <div className="hidden md:block justify-around w-full ">
+              <div className="flex items-center w-full justify-evenly">
                 {/* <Button name="Workspace" iconRight={<ChevronDown/>}></Button> */}
+
                 <WorkSpaceDropDown />
+
                 <Button name="Quotes" iconLeft={<Quotes />}></Button>
                 <Button name="Bookings" iconLeft={<BookingsIcon />}></Button>
-                <div><DropDownFinal /></div>
-                  
-                
+                <div>
+                  <DropDownFinal />
+                </div>
+
                 {/* <Button name="Manage" iconLeft={<SettingsIcon/>} iconRight={<ChevronDown/>}></Button> */}
               </div>
             </div>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-[0.45]">
             <div className="hidden md:block">
               <div className="flex h-full items-center">
                 <RequestQuote />
