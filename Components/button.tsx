@@ -1,21 +1,20 @@
-import SettingsIcon from "../Icons/settingsIcon";
-import BookingsIcon from "../Icons/bookingsIcon";
+import SettingsIcon from '../Icons/settingsIcon';
+import BookingsIcon from '../Icons/bookingsIcon';
 
 export default function Button(props) {
-  return (
-    <div className="flex w-40">
-      <button
-        className=" text-sm font-normal outline-none 
-           h-12  rounded-sm 
-            px-2 py-1 w-full flex text-white justify-center items-center 
-           hover:bg-[#5317C3]"
-      >
-        <span className="">{props.iconLeft}</span>
-        {props.name}
-        {props.iconRight}
-      </button>
-    </div>
-  );
+    return (
+        <div className='flex bg-[#5C20CF] font-light text-sm h-full min-w-30 w-auto'>
+            <button
+                className='outline-none 
+           h-16  rounded-sm 
+            px-5  w-full flex text-white justify-center items-center 
+           hover:bg-[#5317C3] transition duration-250'
+            >
+                <span>{props.iconLeft}</span>
+                <span className='font-light pl-1'>{props.name}</span>
+            </button>
+        </div>
+    );
 }
 // py-5 px-3
 //
