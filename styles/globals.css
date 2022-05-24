@@ -48,3 +48,10 @@ a {
 .min-w-32 {
   min-width: 8rem;
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Light.woff2') format('woff2');
+  }
+}

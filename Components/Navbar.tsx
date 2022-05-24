@@ -20,16 +20,16 @@ function Nav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className='bg-[#5C20CF] h-15 text-sm font-sans font-light w-full '>
-            <div className=''>
+        <nav className='bg-[#5C20CF] font-poppins'>
+            <div className='px-2'>
                 <div className='flex items-center justify-between h-16 '>
                     <div className='flex items-center flex-[0.4]'>
                         <div className='flex-shrink-0 '>
                             <WizIcon />
                         </div>
                         <div className='hidden md:block justify-around w-full '>
-                            <div className='flex items-center w-full justify-center mr-10'>
-                                {/* <Button name="Workspace" iconRight={<ChevronDown/>}></Button> */}
+                            <div className='flex items-center w-full justify-center ml-8'>
+                                
 
                                 <WorkSpaceDropDown />
 
@@ -44,8 +44,6 @@ function Nav() {
                                 <div>
                                     <DropDownFinal />
                                 </div>
-
-                                {/* <Button name="Manage" iconLeft={<SettingsIcon/>} iconRight={<ChevronDown/>}></Button> */}
                             </div>
                         </div>
                     </div>
@@ -53,10 +51,18 @@ function Nav() {
                         <div className='hidden md:block w-full'>
                             <div className='flex h-full items-center justify-end'>
                                 <RequestQuote />
-                                <Button
-                                    name='Wiz Voyage!'
-                                    iconLeft={<ShipIcon />}
-                                ></Button>
+                                <a href="#"
+              className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light px-4"
+                  >
+                  
+                  <span className='text-xl'>🚣</span> &nbsp;&nbsp;Wiz voyage!
+            </a>
+            <a href="#"
+              className="flex items-center text-white h-16 text-sm font-light px-4"
+                  >
+                  
+                  <span><ShipIcon/></span> 
+            </a>
                                 <UserDropdown />
                             </div>
                         </div>

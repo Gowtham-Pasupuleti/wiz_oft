@@ -7,8 +7,8 @@ function DropDown(props) {
                 <Menu.Item>
                     {({ active }) => (
                         <a className={` ${active && ''}`} href='#'>
-                            <span className='flex items-center  text-sm font-light hover:bg-[#f5f5f5cd] h-10 font-sans'>
-                                <span className='pr-3 pl-2'>{props.icon}</span>
+                            <span className='flex items-center  text-xs font-light hover:bg-[#f5f5f5cd] h-10 p-4 font-poppins'>
+                                <span className='pr-2 pl-1'>{props.icon}</span>
                                 {props.name}
                             </span>
                         </a>

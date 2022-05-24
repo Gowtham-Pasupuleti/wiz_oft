@@ -22,15 +22,16 @@ function UserDropdown() {
     return (
         <>
             <div
-                className={`  justify-end px-2 py-1 bg-[#5C20CF]  w-30  antialiased inline-block `}
+            // justify-end px-2 py-1 bg-[#5C20CF]  w-30  antialiased inline-block
+                className={`   `}
                 ref={ref}
             >
                 <Menu>
                     <div className='  bg-[#5C20CF]  rounded-sm w-full '>
                         <Menu.Button
-                            className={`text-sm font-normal outline-none focus:outline-none
-           h-14 rounded-sm 
-            px-2 py-1 w-full flex text-white justify-center   items-center 
+                            className={`px-4 text-sm font-normal outline-none focus:outline-none
+           h-16 rounded-sm 
+         w-full flex text-white justify-center   items-center 
            hover:bg-[#5317C3] `}
                             onClick={() => setClicked(!clicked)}
                         >
@@ -48,7 +49,7 @@ function UserDropdown() {
                             </span>
                         </Menu.Button>
                     </div>
-                    <Transition enter='transition duration-250 ease-in'>
+                    <Transition enter='transition duration-700 ease-in'>
                         <Menu.Items
                             className={`flex flex-col text-left
                             font-light

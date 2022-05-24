@@ -116,7 +116,7 @@ function DropDownFinal() {
                             className={`min-w-20 font-light outline-none focus:outline-none
            h-16  rounded-sm 
              px-4 py-2  flex text-white justify-between items-center 
-           hover:bg-[#5317C3] transition duration-250 ${
+           hover:bg-[#5317C3] transition duration-300 ${
                clicked ? 'bg-[#5317C3]' : ''
            }`}
                             onClick={() => setClicked(!clicked)}
@@ -125,8 +125,8 @@ function DropDownFinal() {
                             <span className='pl-1.5'>Manage</span>
                             <span className='ml-1'>
                                 <svg
-                                    className={`fill-current h-4 w-4 transform 
-        transition duration-150 ease-in-out ${clicked ? 'rotate-180' : ''}`}
+                                    className={`fill-current h-3 w-3 transform 
+        transition duration-300 ease-in-out ${clicked ? 'rotate-180' : ''}`}
                                     xmlns='http://www.w3.org/2000/svg'
                                     viewBox='0 0 20 20'
                                 >
@@ -136,15 +136,15 @@ function DropDownFinal() {
                         </Menu.Button>
                     </>
                     <Transition
-                        enter='transition duration-250 ease-in'
+                        enter='transition duration-300 ease-in'
                         enterFrom='transform l-0 t-0 scale-100 opacity-0'
                         enterTo='transform scale-100 opacity-100'
-                        leave='transition duration-75 ease-out'
+                        leave='transition duration-300 ease-out'
                         leaveFrom='transform scale-100 opacity-100'
                         leaveTo='transform scale-95 opacity-0'
                     >
                         <Menu.Items
-                            className={`fixed flex flex-col w-[200px]
+                            className={`fixed flex flex-col w-[175px] 
   border-white font-light text-xs font-serif mt-3
  ring-1 ring-black ring-opacity-5 shadow-lg rounded-md`}
                         >
