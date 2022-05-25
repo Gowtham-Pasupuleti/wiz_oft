@@ -54,4 +54,8 @@ a {
     font-family: 'Poppins';
     src: url('/fonts/Poppins-Light.woff2') format('woff2');
   }
+  @font-face {
+    font-family: 'PoppinsSemi';
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
+  }
 }

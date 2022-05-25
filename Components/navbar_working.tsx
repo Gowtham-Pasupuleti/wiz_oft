@@ -12,7 +12,6 @@ import ShipIcon from '../Icons/shipIcon';
 import DropDownFinal from './DropDownFinal';
 import WorkSpaceDropDown from './WorkSpaceDropDown';
 import UserDropdown from './UserDropdown';
-import Link from 'next/link';
 
 // const getUserType = ["Admin", "User"][Math.floor(Math.random() * 2)];
 // export const UserContext = React.createContext(getUserType);
@@ -22,33 +21,26 @@ function Nav() {
 
     return (
         <nav className='bg-[#5C20CF] font-poppins'>
-            <div className=''>
+            <div className='px-2'>
                 <div className='flex items-center justify-between h-16 '>
                     <div className='flex items-center flex-[0.4]'>
-                        <Link href="/home">
                         <div className='flex-shrink-0 '>
                             <WizIcon />
                         </div>
-                        </Link>
                         <div className='hidden md:block justify-around w-full '>
-                            <div className='flex w-full ml-8'>
+                            <div className='flex items-center w-full justify-center ml-8'>
                                 
+
                                 <WorkSpaceDropDown />
-                                
-                            <Link href="/quotes">
-                                <a><Button
+
+                                <Button
                                     name='Quotes'
                                     iconLeft={<Quotes />}
-                                ></Button></a>
-                                
-                                </Link>
-                                <Link href="/bookings"><a>
+                                ></Button>
                                 <Button
                                     name='Bookings'
                                     iconLeft={<BookingsIcon />}
                                 ></Button>
-                                    </a></Link>
-                                
                                 <div>
                                     <DropDownFinal />
                                 </div>
@@ -58,27 +50,25 @@ function Nav() {
                     <div className='flex items-center flex-[0.45] justify-around'>
                         <div className='hidden md:block w-full'>
                             <div className='flex h-full items-center justify-end'>
-                                <Link href="/requestQuote"><a><RequestQuote /></a></Link>
-                                
+                                <RequestQuote />
                                 <a href="#"
               className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light px-4"
                   >
-                  <Link href="wizVoyage"><a><span className='text-xl'>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
                   
+                  <span className='text-xl'>🚣</span> &nbsp;&nbsp;Wiz voyage!
             </a>
             <a href="#"
               className="flex items-center text-white h-16 text-sm font-light px-4"
                   >
-                  <Link href="shipIconClickLanding"><a>
-                  <span><ShipIcon/></span> </a></Link>
                   
+                  <span><ShipIcon/></span> 
             </a>
                                 <UserDropdown />
                             </div>
                         </div>
                     </div>
 
-                    <div className=' flex md:hidden w-full justify-end'>
+                    <div className=' flex md:hidden w-full'>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type='button'
@@ -89,7 +79,7 @@ function Nav() {
                             <span className='sr-only'>Open main menu</span>
                             {!isOpen ? (
                                 <svg
-                                    className='block h-6 w-6'
+                                    className='block h-4 w-4'
                                     xmlns='http://www.w3.org/2000/svg'
                                     fill='none'
                                     viewBox='0 0 24 24'
@@ -158,7 +148,7 @@ function Nav() {
                                 iconRight={<ChevronDown />}
                             ></Button>
 
-                            
+                            <RequestQuote />
                             <div className=' '>
                                 <Button
                                     name='Wiz Voyage!'

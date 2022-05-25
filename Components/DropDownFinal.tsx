@@ -95,6 +95,7 @@ import AccessControlIcon from '../Icons/AccessControlIcon';
 import ConfigureUser from '../Icons/ConfigureUser';
 import ConfigureGroup from '../Icons/ConfigureGroup';
 import AirplaneIcon from '../Icons/AirplaneIcon';
+import Link from 'next/link';
 
 function DropDownFinal() {
     const ref = useRef();
@@ -122,7 +123,7 @@ function DropDownFinal() {
                             onClick={() => setClicked(!clicked)}
                         >
                             <SettingsIcon />
-                            <span className='pl-1.5'>Manage</span>
+                            <span className=''>Manage</span>
                             <span className='ml-1'>
                                 <svg
                                     className={`fill-current h-3 w-3 transform 
@@ -144,73 +145,99 @@ function DropDownFinal() {
                         leaveTo='transform scale-95 opacity-0'
                     >
                         <Menu.Items
-                            className={`fixed flex flex-col w-[175px] 
-  border-white font-light text-xs font-serif mt-3
+                            className={`fixed flex flex-col w-[158px] 
+  border-white font-light text-xs font-poppins mt-3
  ring-1 ring-black ring-opacity-5 shadow-lg rounded-md`}
                         >
+                            <Link href="/partners"><a>
                             <DropDown
                                 name='Partners'
                                 icon={<Partners />}
                                 isDropDown={true}
                             />
+                                </a></Link>
+                            
+                            <Link href="/customers"><a>
                             <DropDown
                                 name='Customers'
                                 icon={<Customers />}
                                 isDropDown={false}
-                            />
+                            /></a></Link>
+                            
+                            <Link href="/rateTemplates"><a>
                             <DropDown
                                 name='Rate Templates'
                                 icon={<RateTemplates />}
                                 isDropDown={false}
-                            />
+                            /></a></Link>
+                            
+                            <Link href="/ports"><a>
                             <DropDown
                                 name='Ports'
                                 icon={<Ports />}
                                 isDropDown={false}
-                            />
+                            /></a></Link>
+                            
+                            <Link href="/liners"><a>
                             <DropDown
                                 name='Liners'
                                 icon={<Liners />}
                                 isDropDown={false}
-                            />
+                            /></a></Link>
+                            
+                            <Link href="/executives"><a>
                             <DropDown
                                 name='Executives'
                                 icon={<Executives />}
                                 isDropDown={false}
-                            />
+                            /></a></Link>
+                            
                             {/* <DropDown name="Job Management"icon={<Partners/>}  isDropDown={false} /> */}
                             <DropDown
                                 name='Access Control'
                                 icon={<AccessControlIcon />}
                                 isDropDown={true}
                             >
-                                <div className=''>
-                                    <SubDropDownItems
+                                <div className='ring-1 ring-black ring-opacity-5 shadow-lg rounded-md ml-2'>
+                                <Link href="/configureUser"><a>
+                                <SubDropDownItems
                                         name='Configure User'
                                         leftIcon={<ConfigureUser />}
-                                    />
+                                    /></a></Link>
+                                    
+                                    <Link href="/configureGroup"><a>
                                     <SubDropDownItems
                                         leftIcon={<ConfigureGroup />}
                                         name='Configure Group'
-                                    />
-                                </div>
+                                    /></a></Link>
+
+                                    </div>
+                                    
                             </DropDown>
                             <DropDown
                                 name='Bulk RFQ'
                                 icon={<AccessControlIcon />}
                             >
+                                <div className='ring-1 ring-black ring-opacity-5 shadow-lg rounded-md ml-2'>
+                                <Link href="/manageRFQ"><a>
                                 <SubDropDownItems
                                     name='Manage RFQ'
                                     leftIcon={<Liners />}
-                                />
+                                /></a></Link>
+                                
+                                <Link href="addRFQBuyRates"><a>
                                 <SubDropDownItems
                                     name='Add RFQ Buy Rate'
                                     leftIcon={<Liners />}
-                                />
+                                /></a></Link>
+                                
+                                <Link href="/addRFQSellRates"><a>
                                 <SubDropDownItems
                                     name='Add RFQ Sell Rate'
                                     leftIcon={<Liners />}
-                                />
+                                /></a></Link>
+                                </div>
+                                
                             </DropDown>
                         </Menu.Items>
                     </Transition>

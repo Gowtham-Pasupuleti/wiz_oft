@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import useOutsideClick from './HandleClickOutSide';
 import ConfigureGroup from '../Icons/ConfigureGroup';
 import ConfigureUser from '../Icons/ConfigureUser';
+import Link from 'next/link';
 
 function WorkSpaceDropDown() {
     const ref = useRef();
@@ -18,6 +19,7 @@ function WorkSpaceDropDown() {
             <div className={` inline-block`} ref={ref}>
                 <Menu>
                     <div className='  bg-[#5C20CF]  rounded-sm w-full '>
+                        
                         <Menu.Button
                             className={`font-light text-sm  outline-none focus:outline-none
            h-16  rounded-sm 
@@ -51,14 +53,22 @@ function WorkSpaceDropDown() {
   rounded-sm border-white  text-sm font-serif
   absolute mt-3  ring-1 ring-black ring-opacity-5 shadow-lg w-40 `}
                         >
-                            <DropDown
+                            <Link href="/myworkspace">
+                                <a>
+                                <DropDown
                                 name='My workspace'
                                 icon={<ConfigureUser />}
                             />
+                            </a>
+                            </Link>
+                                
+                            <Link href="/workspace360"><a>
                             <DropDown
                                 name='Workspace-360°'
                                 icon={<ConfigureGroup />}
                             />
+                                </a></Link>
+                            
                         </Menu.Items>
                     </Transition>
                 </Menu>

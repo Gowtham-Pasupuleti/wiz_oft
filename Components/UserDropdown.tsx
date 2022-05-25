@@ -10,6 +10,7 @@ import ConfigureUser from '../Icons/ConfigureUser';
 import ReportsIcon from '../Icons/ReportsIcon';
 import LogoutIcon from '../Icons/LogoutIcon';
 import ErrorIcon from '../Icons/ErrorIcon';
+import Link from 'next/link';
 
 function UserDropdown() {
     const ref = useRef();
@@ -23,13 +24,13 @@ function UserDropdown() {
         <>
             <div
             // justify-end px-2 py-1 bg-[#5C20CF]  w-30  antialiased inline-block
-                className={`   `}
+                className={`` }
                 ref={ref}
             >
                 <Menu>
                     <div className='  bg-[#5C20CF]  rounded-sm w-full '>
                         <Menu.Button
-                            className={`px-4 text-sm font-normal outline-none focus:outline-none
+                            className={`px-4 text-sm font-poppinsSemi outline-none focus:outline-none
            h-16 rounded-sm 
          w-full flex text-white justify-center   items-center 
            hover:bg-[#5317C3] `}
@@ -39,8 +40,8 @@ function UserDropdown() {
                             Admin
                             <span className='ml-1'>
                                 <svg
-                                    className={`fill-current h-4 w-4 transform 
-        transition duration-150 ease-in-out ${clicked ? 'rotate-180' : ''}`}
+                                    className={`fill-current h-3 w-3 transform 
+        transition duration-300 ease-in-out ${clicked ? 'rotate-180' : ''}`}
                                     xmlns='http://www.w3.org/2000/svg'
                                     viewBox='0 0 20 20'
                                 >
@@ -53,26 +54,39 @@ function UserDropdown() {
                         <Menu.Items
                             className={`flex flex-col text-left
                             font-light
-  rounded-sm border-white  text-base font-serif
+  rounded-md border-white  text-base font-poppins
   absolute top-0 right-0 mt-20 mr-1 min-w-50
   ring-1 ring-black ring-opacity-5 shadow-lg
   `}
                         >
-                            <DropDown name='Account' icon={<ConfigureUser />} />
-                            <DropDown name='Reports' icon={<ReportsIcon />} />
+                            <Link href="/reportsProblem"><a>
                             <DropDown
                                 name='Report Problem'
                                 icon={<ErrorIcon />}
-                            />
+                            /></a></Link>
+                            
+                            <Link href="/supportRequest"><a>
                             <DropDown
                                 name='Support Request'
                                 icon={<SupportReqIcon />}
                             />
+                                </a></Link>
+                            
+                            <Link href="/productUpdates"><a>
                             <DropDown
                                 name='Product Updates'
                                 icon={<ProductUpdates />}
                             />
-                            <DropDown name='Logout' icon={<LogoutIcon />} />
+                                </a></Link>
+                            
+                            <Link href="/account"><a><DropDown name='Account' icon={<ConfigureUser />} /></a></Link>
+                            
+                            <Link href="reports"><a><DropDown name='Reports' icon={<ReportsIcon />} /></a></Link>
+                            
+                            
+                            <Link href="/logout"><a><DropDown name='Logout' icon={<LogoutIcon />} /></a></Link>
+                           
+                            
                         </Menu.Items>
                     </Transition>
                 </Menu>
