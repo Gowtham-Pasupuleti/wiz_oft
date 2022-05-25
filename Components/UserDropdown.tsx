@@ -50,13 +50,20 @@ function UserDropdown() {
                             </span>
                         </Menu.Button>
                     </div>
-                    <Transition enter='transition duration-700 ease-in'>
+                    <Transition
+                        enter='transition duration-500 ease-in'
+                        enterFrom='transform l-0 t-0 scale-100 opacity-0'
+                        enterTo='transform scale-100 opacity-100'
+                        leave='transition duration-300 ease-out'
+                        leaveFrom='transform scale-100 opacity-100'
+                        leaveTo='transform scale-95 opacity-0'
+                    >
                         <Menu.Items
                             className={`flex flex-col text-left
                             font-light
-  rounded-md border-white  text-base font-poppins
-  absolute top-0 right-0 mt-20 mr-1 min-w-50
-  ring-1 ring-black ring-opacity-5 shadow-lg
+  rounded-md border-white w-40 text-base font-poppins
+  absolute top-0 right-0 mt-2 mr-1 min-w-50
+  ring-1 ring-black ring-opacity-5 shadow-lg bg-white
   `}
                         >
                             <Link href="/reportsProblem"><a>

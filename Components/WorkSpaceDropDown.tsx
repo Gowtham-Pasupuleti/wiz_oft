@@ -16,14 +16,14 @@ function WorkSpaceDropDown() {
 
     return (
         <>
-            <div className={` inline-block`} ref={ref}>
+            <div className={``} ref={ref}>
                 <Menu>
                     <div className='bg-[#5C20CF] rounded-sm w-full '>
                         
                         <Menu.Button
-                            className={`font-light text-sm  outline-none focus:outline-none
+                            className={` font-light text-sm  outline-none focus:outline-none
            h-16  rounded-sm 
-            px-3 pl-5 w-full flex text-[#f5f5f5] justify-center items-center  hover:bg-[#5317C3] transition duration-500
+            px-3 pl-5 w-full flex text-[#f5f5f5]  items-center  hover:bg-[#5317C3] transition duration-500
            ${clicked ? 'bg-[#5317C3] ' : ''}`}
                             onClick={() => setClicked(!clicked)}
                         >
@@ -50,8 +50,8 @@ function WorkSpaceDropDown() {
                     >
                         <Menu.Items
                             className={`flex flex-col  text-left
-  rounded-sm border-white  text-sm font-serif
-  absolute mt-3  ring-1 ring-black ring-opacity-5 shadow-lg w-40 `}
+  rounded-md border-white  text-sm font-serif
+  absolute mt-3  ring-1 ring-black ring-opacity-5 shadow-lg w-40 bg-white`}
                         >
                             <Link href="/myworkspace">
                                 <a>

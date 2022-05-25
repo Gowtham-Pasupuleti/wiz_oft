@@ -108,15 +108,15 @@ function DropDownFinal() {
     return (
         <>
             <div
-                className={`inline-block text-sm items-center font-light bg-[#5C20CF] `}
+                className={`text-sm items-center font-light bg-[#5C20CF]`}
                 ref={ref}
             >
                 <Menu>
                     <>
                         <Menu.Button
                             className={`min-w-20 font-light outline-none focus:outline-none
-           h-16  rounded-sm 
-             px-4 py-2  flex text-white justify-between items-center 
+           h-16  rounded-sm w-full
+             px-4 py-2  flex text-white  items-center 
            hover:bg-[#5317C3] transition duration-300 ${
                clicked ? 'bg-[#5317C3]' : ''
            }`}
@@ -147,7 +147,7 @@ function DropDownFinal() {
                         <Menu.Items
                             className={`fixed flex flex-col w-[158px] 
   border-white font-light text-xs font-poppins mt-3
- ring-1 ring-black ring-opacity-5 shadow-lg rounded-md`}
+ ring-1 ring-black ring-opacity-5 shadow-lg rounded-md bg-white`}
                         >
                             <Link href="/partners"><a>
                             <DropDown
