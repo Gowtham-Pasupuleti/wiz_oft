@@ -15,7 +15,7 @@ function DropDown(props) {
                 <Menu.Item>
                     {({ active }) => (
                         <a className={` ${active && ''}`} href='#'>
-                            <span className='flex items-center  text-xs font-light hover:bg-[#f5f5f5cd] h-[50px] p-4 font-poppins'>
+                            <span className='flex items-center  text-xs font-light hover:bg-[#f5f5f5cd]  h-[50px] p-4 font-poppins'>
                                 <span className='pr-2 '>{props.icon}</span>
                                 {props.name}
                             </span>
@@ -39,21 +39,25 @@ function DropDown(props) {
                         </div>
                     </span>
                     <span className=''>
-                        <svg
-                            className={`fill-current h-3 w-3 ${clicked ? 'rotate-[-270deg]' : 'rotate-[270deg]'}`}
+                        {/* <svg
+                            className={`fill-current h-3 w-3 transition duration-700 ease-in ${clicked ? 'rotate-[-270deg]' : 'rotate-[270deg]'}`}
             
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 20 20'
                             strokeWidth='1'
                         >
                             <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
-                        </svg>
+                        </svg> */}
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        className={` transition duration-300 ease-in h-3 w-3 mr-1  ${clicked ? 'rotate-[-180deg]' : 'rotate-[]'}`}  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
                     </span>
                 </button>
             
                 <ul
                     className={`bg-white rounded absolute top-0 
-      transition duration-200 ease-in-out origin-top-${
+      transition duration-500 ease-in-out origin-top-${
           props.isRight ? 'right-0  mr-2' : 'left-0 ml-2'
       } w-40 ${props.isRight ? 'right-80' : 'right-0 '}
    `}

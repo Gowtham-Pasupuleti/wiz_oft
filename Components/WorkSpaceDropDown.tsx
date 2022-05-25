@@ -23,12 +23,12 @@ function WorkSpaceDropDown() {
                         <Menu.Button
                             className={`font-light text-sm  outline-none focus:outline-none
            h-16  rounded-sm 
-            px-3 w-full flex text-[#f5f5f5] justify-center items-center  hover:bg-[#5317C3] transition duration-500
+            px-3 pl-5 w-full flex text-[#f5f5f5] justify-center items-center  hover:bg-[#5317C3] transition duration-500
            ${clicked ? 'bg-[#5317C3] ' : ''}`}
                             onClick={() => setClicked(!clicked)}
                         >
                             Workspace
-                            <span className='ml-1'>
+                            <span className='ml-2'>
                                 <svg
                                     className={`fill-current h-3 w-3 transform 
         transition duration-500 ease-in-out ${clicked ? 'rotate-180' : ''}`}

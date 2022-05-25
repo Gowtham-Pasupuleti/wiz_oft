@@ -7,11 +7,11 @@ export default function Button(props) {
             <button
                 className='outline-none 
            h-16  rounded-sm 
-            px-5  w-full flex text-white justify-center items-center 
+            px-4  w-full flex text-white justify-center items-center 
            hover:bg-[#5317C3] transition duration-250'
             >
                 <span>{props.iconLeft}</span>
-                <span className='font-light pl-1'>{props.name}</span>
+                <span className='font-light '>{props.name}</span>
             </button>
         </div>
     );
