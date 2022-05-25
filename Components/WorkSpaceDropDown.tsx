@@ -18,7 +18,7 @@ function WorkSpaceDropDown() {
         <>
             <div className={` inline-block`} ref={ref}>
                 <Menu>
-                    <div className='  bg-[#5C20CF]  rounded-sm w-full '>
+                    <div className='bg-[#5C20CF] rounded-sm w-full '>
                         
                         <Menu.Button
                             className={`font-light text-sm  outline-none focus:outline-none
