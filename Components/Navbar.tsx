@@ -55,15 +55,15 @@ function Nav() {
                             </div>
                         </div>
                     </div>
-                    <div className='flex items-center flex-[0.45] justify-around'>
-                        <div className='hidden md:block w-full'>
+                    <div className='flex items-center flex-[0.5] '>
+                        <div className='hidden md:block w-full '>
                             <div className='flex h-full items-center justify-end'>
-                                <Link href="/requestQuote"><a><RequestQuote /></a></Link>
+                                <Link href="/requestQuote"><a className='w-6/12'><RequestQuote /></a></Link>
                                 
                                 <a href="#"
               className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light px-4"
                   >
-                  <Link href="wizVoyage"><a><span className='text-xl'>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
+                  <Link  href="wizVoyage"><a><span className='text-xl '>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
                   
             </a>
             <a href="#"
@@ -140,33 +140,44 @@ function Nav() {
                             ref={ref}
                             className='px-2 pt-2 pb-3 space-y-1 sm:px-3'
                         >
-                            <Button
+                            {/* <Button
                                 name='Workspace'
                                 iconRight={<ChevronDown />}
-                            ></Button>
-                            <Button
-                                name='Quotes'
-                                iconLeft={<Quotes />}
-                            ></Button>
-                            <Button
-                                name='Bookings'
-                                iconLeft={<BookingsIcon />}
-                            ></Button>
-                            <Button
-                                name='Manage'
-                                iconLeft={<SettingsIcon />}
-                                iconRight={<ChevronDown />}
-                            ></Button>
+                            ></Button> */}
+                            <WorkSpaceDropDown />
+                            <Link href="/quotes">
+                                <a><Button
+                                    name='Quotes'
+                                    iconLeft={<Quotes />}
+                                ></Button></a>
+                                
+                                </Link>
+                                <Link href="/bookings"><a>
+                                <Button
+                                    name='Bookings'
+                                    iconLeft={<BookingsIcon />}
+                                ></Button>
+                                    </a></Link>
+                            <DropDownFinal />
+                            <Link href="/requestQuote"><a className='w-6/12'><RequestQuote /></a></Link>
+                                
+                                <a href="#"
+              className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light px-4"
+                  >
+                  <Link  href="wizVoyage"><a><span className='text-xl '>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
+                  
+            </a>
+                                <UserDropdown />
 
                             
-                            <div className=' '>
+                            {/* <div className=' '>
                                 <Button
                                     name='Wiz Voyage!'
                                     iconLeft={<ShipIcon />}
                                 ></Button>
                             </div>
 
-                            <UserDropdown />
+                            <UserDropdown /> */}
                         </div>
                     </div>
                 )}
