@@ -1,7 +1,8 @@
 import React from 'react'
+import Example from '../Components/worksapcetDisclosure'
 
 export default function Home() {
   return (
-    <div>Home page</div>
+    <div>This is Home Page</div>
   )
 }

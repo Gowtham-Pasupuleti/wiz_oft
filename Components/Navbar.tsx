@@ -13,6 +13,10 @@ import DropDownFinal from './DropDownFinal';
 import WorkSpaceDropDown from './WorkSpaceDropDown';
 import UserDropdown from './UserDropdown';
 import Link from 'next/link';
+import Example from './worksapcetDisclosure';
+import ManageDisclosure from './mangeDisclosure';
+import WorksapcetDisclosure from './worksapcetDisclosure';
+import AdminDisclosure from './adminDisclosure';
 
 // const getUserType = ["Admin", "User"][Math.floor(Math.random() * 2)];
 // export const UserContext = React.createContext(getUserType);
@@ -140,11 +144,9 @@ function Nav() {
                             ref={ref}
                             className='px-2 pt-2 pb-3 space-y-1 sm:px-3'
                         >
-                            {/* <Button
-                                name='Workspace'
-                                iconRight={<ChevronDown />}
-                            ></Button> */}
-                            <WorkSpaceDropDown />
+                            
+                            
+                            <WorksapcetDisclosure/>
                             <Link href="/quotes">
                                 <a><Button
                                     name='Quotes'
@@ -158,16 +160,16 @@ function Nav() {
                                     iconLeft={<BookingsIcon />}
                                 ></Button>
                                     </a></Link>
-                            <DropDownFinal />
+                            <ManageDisclosure/>
                             <Link href="/requestQuote"><a className='w-6/12'><RequestQuote /></a></Link>
                                 
                                 <a href="#"
-              className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light px-4"
+              className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light"
                   >
                   <Link  href="wizVoyage"><a><span className='text-xl '>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
                   
             </a>
-                                <UserDropdown />
+                                <AdminDisclosure/>
 
                             
                             {/* <div className=' '>

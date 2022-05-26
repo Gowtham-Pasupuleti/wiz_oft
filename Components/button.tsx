@@ -7,7 +7,7 @@ export default function Button(props) {
             <button
                 className='outline-none 
            h-16  rounded-sm 
-            px-4  w-full flex text-white items-center 
+           px-0 sm:px-4 w-full flex text-white items-center 
            hover:bg-[#5317C3] transition duration-250'
             >
                 <span>{props.iconLeft}</span>
