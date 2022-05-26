@@ -1,6 +1,12 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import UserIcon from '../Icons/userIcon'
+import ErrorIcon from '../Icons/ErrorIcon'
+import ProductUpdates from '../Icons/ProductUpdates'
+import SupportReqIcon from '../Icons/SupportReqIcon'
+import ConfigureUser from '../Icons/ConfigureUser'
+import ReportsIcon from '../Icons/ReportsIcon'
+import LogoutIcon from '../Icons/LogoutIcon'
 
 export default function AdminDisclosure() {
   return (
@@ -20,12 +26,12 @@ export default function AdminDisclosure() {
                   
             <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-white">
                 <ul>
-                    <li className='px-4 pt-2 pb-2'>Report Problem</li>
-                    <li className='px-4 pt-2 pb-2'>Support Request</li>
-                    <li className='px-4 pt-2 pb-2'>Product Updates</li>
-                    <li className='px-4 pt-2 pb-2'>Account</li>
-                    <li className='px-4 pt-2 pb-2'>Reports</li>
-                    <li className='px-4 pt-2 pb-2'>Logout</li>
+                    <li className='px-4 pt-2 pb-2 flex items-center'><ErrorIcon />Report Problem</li>
+                    <li className='px-4 pt-2 pb-2 flex items-center'><SupportReqIcon />Support Request</li>
+                    <li className='px-4 pt-2 pb-2 flex items-center'><ProductUpdates />Product Updates</li>
+                    <li className='px-4 pt-2 pb-2 flex items-center'><ConfigureUser />Account</li>
+                    <li className='px-4 pt-2 pb-2 flex items-center'><ReportsIcon />Reports</li>
+                    <li className='px-4 pt-2 pb-2 flex items-center'><LogoutIcon />Logout</li>
                     
                 </ul>
                 
