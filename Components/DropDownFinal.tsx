@@ -81,7 +81,7 @@
 import { Menu, Transition } from '@headlessui/react';
 import DropDown from './DropDown';
 import SubDropDownItems from './SubDropDownItems';
-import { useState, useRef } from 'react';
+import { useState, useRef} from 'react';
 import useOutsideClick from './HandleClickOutSide';
 import SettingsIcon from '../Icons/settingsIcon';
 import Partners from '../Icons/partners';
@@ -110,8 +110,9 @@ function DropDownFinal() {
             <div
                 className={`text-sm items-center font-light bg-[#5C20CF]`}
                 ref={ref}
+
             >
-                <Menu>
+                <Menu >
                     <>
                         <Menu.Button
                             className={`min-w-20 font-light outline-none focus:outline-none
@@ -214,7 +215,7 @@ function DropDownFinal() {
                                     </div>
                                     
                             </DropDown>
-                            <DropDown
+                            {/* <DropDown
                                 name='Bulk RFQ'
                                 icon={<AccessControlIcon />}
                             >
@@ -238,7 +239,7 @@ function DropDownFinal() {
                                 /></a></Link>
                                 </div>
                                 
-                            </DropDown>
+                            </DropDown> */}
                         </Menu.Items>
                     </Transition>
                 </Menu>

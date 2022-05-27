@@ -32,7 +32,7 @@ function UserDropdown() {
                         <Menu.Button
                             className={`px-4 text-sm font-poppinsSemi outline-none focus:outline-none
            h-16 rounded-sm 
-         w-full flex text-white sm:justify-center   items-center 
+         w-full flex text-white md:justify-center   items-center 
            hover:bg-[#5317C3] `}
                             onClick={() => setClicked(!clicked)}
                         >
@@ -82,7 +82,7 @@ function UserDropdown() {
                             <Link href="/productUpdates"><a>
                             <DropDown
                                 name='Product Updates'
-                                icon={<ProductUpdates />}
+                                icon={<span className='text-black '><ProductUpdates /></span>}
                             />
                                 </a></Link>
                             

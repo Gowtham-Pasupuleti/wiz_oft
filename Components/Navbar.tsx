@@ -39,11 +39,12 @@ function Nav() {
                                 
                                 <WorkSpaceDropDown />
                                 
-                            <Link href="/quotes">
-                                <a><Button
+                            <Link href="/quotes" >
+                                <a> <Button name="Quotes" iconLeft={<Quotes/>} /></a>
+                                {/* <a><Button
                                     name='Quotes'
                                     iconLeft={<Quotes />}
-                                ></Button></a>
+                                ></Button></a> */}
                                 
                                 </Link>
                                 <Link href="/bookings"><a>
@@ -142,7 +143,7 @@ function Nav() {
                     <div className='md:hidden' id='mobile-menu'>
                         <div
                             ref={ref}
-                            className='px-2 pt-2 pb-3 space-y-1 sm:px-3'
+                            className=' pt-2 space-y-1 md:px-3'
                         >
                             
                             
@@ -161,12 +162,12 @@ function Nav() {
                                 ></Button>
                                     </a></Link>
                             <ManageDisclosure/>
-                            <Link href="/requestQuote"><a className='w-6/12'><RequestQuote /></a></Link>
+                            <Link href="/requestQuote"><button className='text-white hover:bg-[#5317C3] text-poppins w-full flex items-center py-4 px-5 text-sm'>+ Request Quote</button></Link>
                                 
                                 <a href="#"
-              className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light"
+              className="flex items-center text-white hover:bg-[#5317C3] py-4 px-5 text-sm font-light"
                   >
-                  <Link  href="wizVoyage"><a><span className='text-xl '>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
+                  <Link  href="wizVoyage"><a><span className='pr-1'>🚣</span>Wiz voyage!</a></Link>
                   
             </a>
                                 <AdminDisclosure/>

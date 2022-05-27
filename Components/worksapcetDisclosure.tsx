@@ -2,6 +2,9 @@ import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import ConfigureUser from '../Icons/ConfigureUser'
 import ConfigureGroup from '../Icons/ConfigureGroup'
+import Partners from '../Icons/partners'
+import Customers from '../Icons/customers'
+import Link from 'next/link'
 
 export default function WorksapcetDisclosure() {
   return (
@@ -11,22 +14,33 @@ export default function WorksapcetDisclosure() {
           {({ open }) => (
             <>
             <div className=''>
-            <Disclosure.Button className="flex  items-center w-full bg-[#5C20CF] text-white hover:bg-[#5317C3] py-3 ">
-             <span>Workspace</span>
-             <svg xmlns="http://www.w3.org/2000/svg" className={` ${open ? 'rotate-180 transform' : ''} h3 w-3 pl-2 fill-white`} viewBox="0 0 512 512"><title>arrow-triangle-down-glyph</title><path d="M3,111.67,247.67,418.4c4,5.06,12.6,5.06,16.65,0L509,111.64a15.21,15.21,0,0,0,2.2-13.9,14.2,14.2,0,0,0-1-2.32,10.66,10.66,0,0,0-9.39-5.62H11.14a10.64,10.64,0,0,0-9.38,5.62,13.93,13.93,0,0,0-1,2.27A15.26,15.26,0,0,0,3,111.67Z"/></svg>
+            <Disclosure.Button className="flex  items-center w-full bg-[#5C20CF] text-white hover:bg-[#5317C3] py-4 px-5 text-sm">
+            <ConfigureGroup /><span className='px-1'>Workspace</span>
+            <svg className={`fill-current h-3 w-3 transform transition duration-500 ease-in-out ${open ? 'rotate-180' : ''}`}
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'>
+              <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
+              </svg>
               </Disclosure.Button>
             
         
                   
-            <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-white flex items-center">
-            <ConfigureUser />My Workspace
+            {/* <Disclosure.Panel className="px-10 pt-4 pb-3 text-sm text-white flex items-center hover:bg-[#5317C3]">
+            <Link href="/myworkspace"><a className='flex items-center'><Partners /> &nbsp;My Workspace</a></Link>
               </Disclosure.Panel>
                   
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-white flex items-center">
-              <ConfigureGroup />Workspace 360
-              </Disclosure.Panel>
+              <Disclosure.Panel className="px-10 pt-4 pb-3 text-sm text-white flex items-center hover:bg-[#5317C3]">
+              <Link href="/workspace360"><a className='flex items-center'><Customers />&nbsp;Workspace 360</a></Link>
+              </Disclosure.Panel> */}
+
+          
               
-              
+              <Disclosure.Panel className="px-4 pt-2 pb-2 text-sm text-white">
+                <ul>
+                <Link href="/myworkspace"><li className='px-6 pt-2 pb-3 flex items-center hover:bg-[#5317C3]'><Partners />&nbsp;My workspace</li></Link>
+                <Link href="/workspace360"><li className='px-6 pt-2 pb-3 flex items-center hover:bg-[#5317C3]'><Customers />&nbsp;Workspace 360</li></Link>
+                  </ul>
+                  </Disclosure.Panel>
               
 
             </div>

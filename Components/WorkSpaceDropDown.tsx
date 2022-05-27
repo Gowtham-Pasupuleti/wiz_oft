@@ -5,6 +5,8 @@ import useOutsideClick from './HandleClickOutSide';
 import ConfigureGroup from '../Icons/ConfigureGroup';
 import ConfigureUser from '../Icons/ConfigureUser';
 import Link from 'next/link';
+import Partners from '../Icons/partners';
+import Customers from '../Icons/customers';
 
 function WorkSpaceDropDown() {
     const ref = useRef();
@@ -57,7 +59,7 @@ function WorkSpaceDropDown() {
                                 <a>
                                 <DropDown
                                 name='My workspace'
-                                icon={<ConfigureUser />}
+                                icon={<Partners />}
                             />
                             </a>
                             </Link>
@@ -65,7 +67,7 @@ function WorkSpaceDropDown() {
                             <Link href="/workspace360"><a>
                             <DropDown
                                 name='Workspace-360°'
-                                icon={<ConfigureGroup />}
+                                icon={<Customers />}
                             />
                                 </a></Link>
                             
