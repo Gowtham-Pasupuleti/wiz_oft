@@ -39,7 +39,7 @@ function UserDropdown() {
                             <UserIcon />
                             Admin
                             <span className='ml-1'>
-                                <svg
+                                <svg 
                                     className={`fill-current h-3 w-3 transform 
         transition duration-300 ease-in-out ${clicked ? 'rotate-180' : ''}`}
                                     xmlns='http://www.w3.org/2000/svg'
@@ -50,7 +50,7 @@ function UserDropdown() {
                             </span>
                         </Menu.Button>
                     </div>
-                    <Transition
+                    <Transition 
                         enter='transition duration-500 ease-in'
                         enterFrom='transform l-0 t-0 scale-100 opacity-0'
                         enterTo='transform scale-100 opacity-100'
@@ -58,7 +58,7 @@ function UserDropdown() {
                         leaveFrom='transform scale-100 opacity-100'
                         leaveTo='transform scale-95 opacity-0'
                     >
-                        <Menu.Items
+                        <Menu.Items 
                             className={`flex flex-col text-left
                             font-light
   rounded-md border-white w-40 text-base font-poppins

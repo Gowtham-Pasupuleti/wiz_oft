@@ -13,8 +13,21 @@ function MyApp({ Component, pageProps }) {
     <>
     {!isSSR &&
     <>
+    <body className="flex flex-col min-h-screen ">
+    <header>
     <Nav></Nav>
+    </header>
+    <main className="flex-grow">
     <Component {...pageProps} />
+    
+    </main>
+    <footer>
+     Footer
+    </footer>
+  </body>
+  
+    
+    
     </>
     
     

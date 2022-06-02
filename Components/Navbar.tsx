@@ -13,16 +13,18 @@ import DropDownFinal from './DropDownFinal';
 import WorkSpaceDropDown from './WorkSpaceDropDown';
 import UserDropdown from './UserDropdown';
 import Link from 'next/link';
-import Example from './worksapcetDisclosure';
+import Example from './worksapceDisclosure';
 import ManageDisclosure from './mangeDisclosure';
-import WorksapcetDisclosure from './worksapcetDisclosure';
+import WorksapceDisclosure from './worksapceDisclosure';
 import AdminDisclosure from './adminDisclosure';
 
-// const getUserType = ["Admin", "User"][Math.floor(Math.random() * 2)];
-// export const UserContext = React.createContext(getUserType);
-// export const UserProvider = UserContext.Provider;
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
+    const [currentTab,setCurrentTab]=useState();
+
+    const handleClick=(e)=>{
+        console.log("event of navbar=",e.target);
+    }
 
     return (
         <nav className='bg-[#5C20CF] font-poppins'>
@@ -66,13 +68,13 @@ function Nav() {
                                 <Link href="/requestQuote"><a className='w-6/12'><RequestQuote /></a></Link>
                                 
                                 <a href="#"
-              className="flex items-center text-white hover:bg-[#5317C3] h-16 text-sm font-light px-4"
+              className="flex items-center text-white hover:bg-[#5317C3] bg-[#5C20CF] h-16 text-sm font-light px-4"
                   >
-                  <Link  href="wizVoyage"><a><span className='text-xl '>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
+                  <Link  href="wizVoyage"><a><span className='text-xl  '>🚣</span> &nbsp;&nbsp;Wiz voyage!</a></Link>
                   
             </a>
             <a href="#"
-              className="flex items-center text-white h-16 text-sm font-light px-4"
+              className=" bg-[#5C20CF] flex items-center text-white h-16 text-sm font-light px-4"
                   >
                   <Link href="shipIconClickLanding"><a>
                   <span><ShipIcon/></span> </a></Link>
@@ -147,7 +149,7 @@ function Nav() {
                         >
                             
                             
-                            <WorksapcetDisclosure/>
+                            <WorksapceDisclosure/>
                             <Link href="/quotes">
                                 <a><Button
                                     name='Quotes'
